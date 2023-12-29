@@ -1,0 +1,56 @@
+basePath: /
+definitions:
+  api.Response:
+    properties:
+      code:
+        type: integer
+      data: {}
+      msg:
+        type: string
+    type: object
+host: 127.0.0.1:5001
+info:
+  contact: {}
+  description: swagger接口文档——菜单权限管理
+  title: Swagger权限管理
+  version: "1.0"
+paths:
+  /login:
+    post:
+      consumes:
+      - application/json
+      description: 用户登录系统
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Response'
+      summary: 用户登录
+      tags:
+      - Sys-系统相关
+  /register:
+    post:
+      consumes:
+      - application/json
+      description: 注册用户数据
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.Response'
+      summary: 注册用户
+      tags:
+      - Sys-系统相关
+swagger: "2.0"
